@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ritm — privacy policy</title>
+<style>
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:720px;margin:0 auto;padding:16px;line-height:1.5;color:#1c1c1e;background:#fff}
+  @media (prefers-color-scheme:dark){body{color:#f2f2f7;background:#000}}
+  h1{font-size:1.5em}h2{font-size:1.15em;margin-top:1.4em}
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy policy of the Ritm app</h1>
+<p><b>Version of 8 October 2026.</b> The Russian version is the original; this is a translation.</p>
+
+<h2>In short</h2>
+<p>Your tasks, schedule, notes and settings are stored only on your phone. We don’t receive them. With your permission the app sends anonymous statistics: which features are used. It helps us understand what to improve and what to remove.</p>
+
+<h2>What is stored on the phone</h2>
+<ul>
+<li>Tasks, notes, schedule, “done” marks and settings — in the app’s storage.</li>
+<li>Backups — in the “Downloads/Ritm” folder on the phone, if enabled.</li>
+<li>Your AI key, if you entered one. It is stored only on the phone and never goes into backups.</li>
+</ul>
+
+<h2>What is sent if you allowed statistics</h2>
+<p>Google Analytics for Firebase (Google LLC) receives events such as “marked an activity as done”, “opened Extend”, “changed the sound setting”. Events may have simple parameters: activity type (e.g. “english”), duration as a range (under 15 minutes, 15–60, over 60), step number, yes or no.</p>
+<p>Firebase also collects technical data itself: phone model, Android and app version, language, country and city by IP address, session times and a random installation ID.</p>
+
+<h2>What is never sent</h2>
+<ul>
+<li>Titles and texts of tasks, notes and activities, tags, your profile.</li>
+<li>Name, phone number, email, contacts.</li>
+<li>Precise location. The city for the weather forecast is chosen on the phone and is not part of the statistics.</li>
+<li>Advertising ID. The app doesn’t collect it and shows no ads.</li>
+</ul>
+
+<h2>Other services the app contacts itself</h2>
+<ul>
+<li><b>Weather forecast</b> (Open-Meteo): receives only the coordinates of the chosen city or place, without any data about you.</li>
+<li><b>AI</b>, when you use its suggestions: receives the request text (e.g. a task title to split it into steps) and your profile.
+The built-in AI works through Ritm’s server on Cloudflare: it forwards the request to Google Gemini and returns the answer without storing anything.
+A random installation number is sent with the request — only to limit the number of requests per day; it is not linked to your name or phone.
+Google processes the request under its own terms and may use it to improve its models, so don’t put anything into your profile you don’t want to share.
+If you connected your own key, the request goes directly to the service you chose, bypassing Ritm’s server.</li>
+<li><b>Currency rates</b> (open.er-api.com) — for spending totals in the journal: the app only requests exchange rates and sends no data about you.</li>
+<li><b>Bug report</b>: sent only when you tap “Send report” yourself and choose where to send it. It contains the phone and app technical log and what you wrote. Your tasks and schedule are included only if you tick “Attach my data” yourself.</li>
+</ul>
+
+<h2>Permissions</h2>
+<ul>
+<li><b>Notifications, exact alarms, showing over the lock screen</b> — so that reminders and alarms fire on time, including when the phone is locked.</li>
+<li><b>Calendar</b> — only if you turn on “Calendar events”: events are read and the plan is written to a separate “Ritm” calendar on the phone. Nothing is sent anywhere.</li>
+<li><b>Location</b> — only if you choose weather “by phone location”: approximate coordinates go to Open-Meteo for the forecast. Location is never requested in the background.</li>
+<li><b>Microphone</b> — for voice input, only while you hold the microphone button. Speech is recognized by your phone’s speech recognition service (usually Google); the app receives text and keeps no recording. The recognized text may be sent to the AI as described above.</li>
+</ul>
+
+<h2>Why</h2>
+<p>Only to understand which features are used and which aren’t, and to make the app simpler. Data is not sold, not used for advertising and not shared with anyone except Google as the statistics processor.</p>
+
+<h2>How to turn it off</h2>
+<p>“Me” → “About” → “Send statistics”. After turning it off nothing is sent. Uninstalling the app deletes all its data from the phone, except backups in “Downloads”.</p>
+
+<h2>Retention</h2>
+<p>Google keeps statistics events for 14 months, then deletes them. Data is transmitted encrypted.</p>
+
+<h2>Children</h2>
+<p>The app is not intended for children under 13 and does not knowingly collect information about them.</p>
+
+<h2>Contact</h2>
+<p>Questions and data deletion requests: <a href="mailto:ritm.app.help@gmail.com">ritm.app.help@gmail.com</a>.</p>
+</main>
+</body>
+</html>
