@@ -41,7 +41,7 @@
 <ul>
 <li><b>Weather forecast</b> (Open-Meteo): receives only the coordinates of the chosen city or place, without any data about you.</li>
 <li><b>AI</b>, when you use its suggestions: receives the request text (e.g. a task title to split it into steps) and your profile.
-The built-in AI works through Ritm’s server on Cloudflare: it forwards the request to Google Gemini and returns the answer without storing anything.
+The built-in AI works through Ritm’s server on Cloudflare: it forwards the request to Google Gemini (or, when Gemini is busy, to Cloudflare Workers AI models) and returns the answer without storing anything.
 A random installation number is sent with the request — only to limit the number of requests per day; it is not linked to your name or phone.
 Google processes the request under its own terms and may use it to improve its models, so don’t put anything into your profile you don’t want to share.
 If you connected your own key, the request goes directly to the service you chose, bypassing Ritm’s server.</li>
@@ -54,7 +54,8 @@ If you connected your own key, the request goes directly to the service you chos
 <li><b>Notifications, exact alarms, showing over the lock screen</b> — so that reminders and alarms fire on time, including when the phone is locked.</li>
 <li><b>Calendar</b> — only if you turn on “Calendar events”: events are read and the plan is written to a separate “Ritm” calendar on the phone. Nothing is sent anywhere.</li>
 <li><b>Location</b> — only if you choose weather “by phone location”: approximate coordinates go to Open-Meteo for the forecast. Location is never requested in the background.</li>
-<li><b>Microphone</b> — for voice input, only while you hold the microphone button. Speech is recognized by your phone’s speech recognition service (usually Google); the app receives text and keeps no recording. The recognized text may be sent to the AI as described above.</li>
+<li><b>Microphone</b> — for voice input, only while you hold the microphone button. Speech is recognized by your phone’s speech recognition service (usually Google); the app receives text and keeps no recording. The recognized text may be sent to the AI as described above. The microphone is also used for voice notes: recording starts only after you tap "Record voice" and is stored only on your phone.</li>
+<li><b>Note attachments</b> — photos, files and voice recordings you add to a task are stored only on your phone inside the app. If you turn on copying of attachments, copies go to the Downloads/Ritm/вложения folder on the same phone. Nothing is uploaded.</li>
 </ul>
 
 <h2>Why</h2>
