@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ритм — приглашение в семью</title>
+<meta name="robots" content="noindex">
+<!-- Страница ссылки-приглашения «Ритм Семья» (family.js, famJoinUrl). Публикуется в github.com/Ky4-Man/ritm-releases (GitHub Pages).
+     Открывает приложение по ritm://join?c=КОД; если «Ритма» нет — показывает код и ссылки на магазины. -->
+<style>
+:root{--bg:#F4F1EA;--card:#fff;--ink:#14282B;--muted:#5E6E70;--accent:#0E7C76;--line:#E3DED3}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1A1C;--card:#16262A;--ink:#EAF1F0;--muted:#94A6A7;--accent:#3BB3A9;--line:#24383C}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:16px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px 22px;max-width:420px;width:100%;text-align:center}
+h1{font-size:24px;margin:8px 0 6px;letter-spacing:-.01em}
+p{color:var(--muted);margin:6px 0}
+.code{font-size:34px;font-weight:800;letter-spacing:.14em;margin:14px 0 4px;font-variant-numeric:tabular-nums}
+a.b{display:block;text-decoration:none;border-radius:14px;padding:14px;font-weight:700;margin-top:10px}
+a.p{background:var(--accent);color:#fff}a.s{border:1px solid var(--line);color:var(--ink)}
+ol{text-align:left;color:var(--muted);padding-left:20px;margin:16px 0 0}
+svg{width:52px;height:52px;color:#F2A33A}
+</style>
+</head>
+<body>
+<div class="c">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2a5 5 0 0 1 6 4.8"/></svg>
+  <h1 id="t">Вас зовут в семью в «Ритме»</h1>
+  <p id="s">Общие дела, расписание семьи и списки.</p>
+  <div class="code" id="code"></div>
+  <p id="k">код приглашения</p>
+  <a class="b p" id="open" href="#">Открыть в «Ритме»</a>
+  <a class="b s" href="https://play.google.com/store/apps/details?id=com.dmitriy.ritm">Google Play</a>
+  <a class="b s" href="https://www.rustore.ru/catalog/app/com.dmitriy.ritm">RuStore</a>
+  <ol id="how"><li>Установите «Ритм» и откройте его.</li><li>«Я» → «Ритм Семья» → «Вступить по коду».</li><li>Введите код выше.</li></ol>
+</div>
+<script>
+(function(){
+  var m=/[?&]c=([A-Za-z0-9-]{6,7})/.exec(location.search),c=m?m[1].replace(/-/g,'').toUpperCase():'';
+  document.getElementById('code').textContent=c?c.slice(0,3)+'-'+c.slice(3):'—';
+  var url='ritm://join?c='+c;document.getElementById('open').href=url;
+  if(!/^ru\b/i.test(navigator.language||'')){
+    document.documentElement.lang='en';document.title='Ritm — family invitation';
+    var T={t:'You’re invited to a family in Ritm',s:'Shared tasks, family schedule and lists.',k:'invitation code',open:'Open in Ritm',
+      how:'<li>Install Ritm and open it.</li><li>“Me” → “Ritm Family” → “Join with a code”.</li><li>Enter the code above.</li>'};
+    for(var id in T){var e=document.getElementById(id);if(id==='how')e.innerHTML=T[id];else e.textContent=T[id]}
+  }
+  if(c&&/Android/i.test(navigator.userAgent))setTimeout(function(){location.href=url},300);
+})();
+</script>
+</body>
+</html>
