@@ -13,7 +13,7 @@
 <body>
 <main>
 <h1>Privacy policy of the Ritm app</h1>
-<p><b>Version of 20 October 2026.</b> The Russian version is the original; this is a translation.</p>
+<p><b>Version of 26 October 2026.</b> The Russian version is the original; this is a translation.</p>
 
 <h2>In short</h2>
 <p>Your tasks, schedule, notes and settings are stored on your phone. If you choose to sign in with Google (“Account and sync”), a copy is kept in Google Firebase cloud under your account, so you can move to a new phone or use two devices. Without signing in, your data goes nowhere. With your permission the app sends anonymous statistics: which features are used. It helps us understand what to improve and what to remove.</p>
@@ -32,6 +32,16 @@
 <li>Cloud Firestore (Google LLC) stores your Ritm data: tasks, notes, schedule, week templates, check-offs, settings, profile, and photos, files and voice recordings from notes (up to 15 MB each). Only your account can access it: the database rules let nobody else read it, including other users.</li>
 <li>Data is transmitted encrypted and used only for syncing. We don’t read it, sell it or use it for advertising.</li>
 <li>Sign out in “Me” → “Account and sync” → “Sign out”: the data stays on the phone and the cloud copy stops updating.</li>
+</ul>
+
+<h2>Ritm Family — only if you created or joined a family</h2>
+<ul>
+<li>Members of your family (up to 6 people) see your name and email address from your Google account, plus the shared tasks, events, invitations and lists you add to the family, and your answers to invitations.</li>
+<li>From your personal plan the family sees, for the next 14 days, only activity times and — as you choose — their type, the word “busy”, or the name. Notes, journals, summaries and free time are never shared. You can hide a whole day.</li>
+<li>The schedule of a person “without a phone” (for example, a child) is kept by the adult who added them: only the name and activity times that adult enters go to the family.</li>
+<li>For notifications (“you got a task”, “you’re invited”) the cloud stores your phone’s Firebase Cloud Messaging address (Google LLC). Notifications are sent by our server on Cloudflare Workers (Cloudflare, Inc.); it checks that sender and recipient are in the same family; it doesn’t keep the notifications, and technical server logs are deleted after a few days.</li>
+<li>Subscription: the cloud stores the subscription end date and how it was obtained (trial, code, transfer). If you pay by bank transfer, the developer receives a request with your name, email, amount and the receipt screenshot you attach. It is used only to confirm the payment and for income records; we never receive bank card data.</li>
+<li>Leave a family in “Me” → “Ritm Family”. Your personal plan stays with you; tasks and events you added stay with the family. The creator can delete the family — then shared tasks, events and lists are erased for everyone.</li>
 </ul>
 
 <h2>What is sent if you allowed statistics</h2>
@@ -88,7 +98,7 @@ If you connected your own key, the request goes directly to the service you chos
 <p>If you never signed in with Google, there is no account and none of your plan’s content on any server.</p>
 
 <h2>Children</h2>
-<p>The app is not intended for children under 13 and does not knowingly collect information about them.</p>
+<p>The app is not intended for children under 13 and does not knowingly collect information about them. In Ritm Family an adult may add a child “without a phone” — just a name and a schedule entered by the adult; the child has no account.</p>
 
 <h2>Contact</h2>
 <p>Questions and data deletion requests: <a href="mailto:ritm.app.help@gmail.com">ritm.app.help@gmail.com</a>.</p>
