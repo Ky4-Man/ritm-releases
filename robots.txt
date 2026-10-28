@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://ky4-man.github.io/ritm-releases/sitemap.xml
+Sitemap: https://ky4-man.github.io/ritm-releases/arvo/sitemap.xml
