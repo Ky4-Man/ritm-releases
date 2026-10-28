@@ -1,14 +1,51 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ритм — навигатор дня</title>
-<style>body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;line-height:1.5;color:#1c1c1e;background:#fff}
-@media (prefers-color-scheme:dark){body{color:#f2f2f7;background:#0b1413}a{color:#5fe3d2}}a{color:#0b7a73}h1{margin-bottom:4px}</style></head>
-<body><main>
-<h1>Ритм — навигатор дня</h1>
-<p>Расписание, которое подстраивается под тебя: что делать сейчас, дела, напоминания и будильники, виджеты, встроенная нейросеть. Данные хранятся на телефоне.</p>
-<p><a href="privacy.html">Политика конфиденциальности</a> · <a href="terms.html">Пользовательское соглашение</a></p>
-<h2>Ritm — Day Navigator</h2>
-<p>A schedule that adapts to you: what to do now, tasks, reminders and alarms, widgets, built-in AI. Your data stays on your phone.</p>
-<p><a href="privacy-en.html">Privacy policy</a> · <a href="terms-en.html">Terms of use</a></p>
-<p>Поддержка / Support: <a href="mailto:ritm.app.help@gmail.com">ritm.app.help@gmail.com</a></p>
-</main></body></html>
+<title>Ритм — планер дня, который подстраивается под тебя | Android</title><meta name="description" content="Ритм — бесплатный планер дня для Android: что делать сейчас, расписание и дела, будильники, которые звонят, и общий план для всей семьи. Google Play, RuStore.">
+<link rel="canonical" href="https://ky4-man.github.io/ritm-releases/"><link rel="alternate" hreflang="ru" href="https://ky4-man.github.io/ritm-releases/"><link rel="alternate" hreflang="en" href="https://ky4-man.github.io/ritm-releases/en/"><link rel="alternate" hreflang="x-default" href="https://ky4-man.github.io/ritm-releases/en/">
+<link rel="icon" href="img/icon-512.png"><meta name="theme-color" content="#0b4a45">
+<meta property="og:type" content="website"><meta property="og:title" content="Ритм — навигатор дня"><meta property="og:description" content="Ритм — бесплатный планер дня для Android: что делать сейчас, расписание и дела, будильники, которые звонят, и общий план для всей семьи. Google Play, RuStore.">
+<meta property="og:url" content="https://ky4-man.github.io/ritm-releases/"><meta property="og:image" content="https://ky4-man.github.io/ritm-releases/img/feature-ru.png"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Ритм","operatingSystem":"Android 7.0+","applicationCategory":"ProductivityApplication","description":"Ритм — бесплатный планер дня для Android: что делать сейчас, расписание и дела, будильники, которые звонят, и общий план для всей семьи. Google Play, RuStore.","url":"https://ky4-man.github.io/ritm-releases/","downloadUrl":"https://play.google.com/store/apps/details?id=com.dmitriy.ritm","image":"https://ky4-man.github.io/ritm-releases/img/icon-512.png","offers":{"@type":"Offer","price":"0","priceCurrency":"RUB"},"author":{"@type":"Organization","name":"Pulsework"}}</script>
+<style>
+:root{--bg:#f6f8f7;--card:#fff;--ink:#14201e;--mut:#5b6b68;--acc:#0b7a73;--acc2:#11857a;--line:#e3e9e7}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1413;--card:#121d1c;--ink:#eef4f2;--mut:#9aaba7;--acc:#5fe3d2;--acc2:#2bb3a3;--line:#22302e}}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:var(--acc)}.w{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}header .b{display:flex;gap:10px;align-items:center;font-weight:700;font-size:18px;color:var(--ink);text-decoration:none}
+header img{width:36px;height:36px;border-radius:9px}header .l{font-size:14px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:28px 0 56px}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.05;margin:0 0 16px;letter-spacing:-.02em}.hero p{font-size:19px;color:var(--mut);margin:0 0 24px}
+.stores{display:flex;flex-wrap:wrap;gap:10px}.st{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font-weight:600}
+.st.main{background:var(--acc);border-color:var(--acc);color:#fff}@media (prefers-color-scheme:dark){.st.main{color:#06201d}}
+.free{margin-top:14px;font-size:14px;color:var(--mut)}
+.ph{width:100%;max-width:300px;justify-self:center;border-radius:36px;padding:10px;background:#0d1615;box-shadow:0 30px 60px -20px rgba(0,40,36,.45)}
+.ph img{display:block;width:100%;height:auto;border-radius:28px}
+.f{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:44px 0;border-top:1px solid var(--line)}
+.f:nth-of-type(even) .tx{order:2}.f h2{font-size:clamp(26px,3.6vw,36px);margin:0 0 12px;letter-spacing:-.01em}.f p{font-size:18px;color:var(--mut);margin:0}
+.vid{padding:48px 0;border-top:1px solid var(--line);text-align:center}.vid h2{font-size:30px;margin:0 0 20px}
+.yt{position:relative;display:inline-block;width:min(100%,340px);aspect-ratio:9/16;border-radius:24px;overflow:hidden;background:#000;border:0;padding:0;cursor:pointer}
+.yt img{width:100%;height:100%;object-fit:cover;opacity:.9}.yt span{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;font-size:30px;line-height:72px}
+.yt iframe{width:100%;height:100%;border:0}.vid p{margin:18px 0 0}
+.faq{padding:44px 0;border-top:1px solid var(--line)}.faq h2{font-size:30px;margin:0 0 16px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 10px}summary{font-weight:600;cursor:pointer}details p{color:var(--mut);margin:10px 0 0}
+.cta{padding:48px 0;text-align:center;border-top:1px solid var(--line)}.cta .stores{justify-content:center}
+footer{padding:28px 0 40px;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}footer p{margin:6px 0}
+@media (max-width:760px){.hero,.f{grid-template-columns:1fr;gap:28px}.f:nth-of-type(even) .tx{order:0}.ph{max-width:260px}.hero{padding-top:12px}}
+</style></head>
+<body><div class="w">
+<header><a class="b" href="https://ky4-man.github.io/ritm-releases/"><img src="img/icon-512.png" alt="">Ритм</a><a class="l" href="en/" hreflang="en">English</a></header>
+<section class="hero"><div><h1>Ритм — навигатор дня</h1><p>Открываешь — и сразу видно, что делать сейчас, сколько на это осталось и что дальше. Одна кнопка «Готово».</p><div class="stores"><a class="st main" href="https://play.google.com/store/apps/details?id=com.dmitriy.ritm" rel="noopener">Google Play</a><a class="st" href="https://www.rustore.ru/catalog/app/com.dmitriy.ritm" rel="noopener">RuStore</a><a class="st" href="https://ritm-day-navigator.ru.uptodown.com/android" rel="noopener">Uptodown (APK)</a></div><div class="free">Бесплатно · Android 7 и новее · 13 языков</div></div>
+<div class="ph"><img src="img/ru-now.png" alt="Экран приложения Ритм" width="1170" height="2532"></div></section>
+<section class="f"><div class="tx"><h2>Не получается? «Не могу»</h2><p>Ритм предложит, чем заменить или куда перенести, не ломая остальной день. «Заменить», «Продлить», перетаскивание и свайпы — план меняется в пару касаний.</p></div><div class="ph"><img src="img/ru-cant.png" alt="Экран приложения Ритм: Не получается? «Не могу»" width="1170" height="2532" loading="lazy"></div></section>
+<section class="f"><div class="tx"><h2>План дня и недели</h2><p>Три вопроса при первом запуске — и неделя собрана: подъём, работа, спорт, отдых, сон. Шаблоны недели легко поправить.</p></div><div class="ph"><img src="img/ru-plan.png" alt="Экран приложения Ритм: План дня и недели" width="1170" height="2532" loading="lazy"></div></section>
+<section class="f"><div class="tx"><h2>Дела и заметки</h2><p>Быстрый ввод обычными словами: «позвонить завтра в 15:00». Сроки, повторы, папки, теги, заметки с галочками и голосовые записи. Перенос из TickTick и Todoist.</p></div><div class="ph"><img src="img/ru-tasks.png" alt="Экран приложения Ритм: Дела и заметки" width="1170" height="2532" loading="lazy"></div></section>
+<section class="f"><div class="tx"><h2>Будильники, которые звонят</h2><p>До пяти напоминаний у занятия: уведомление или настоящий будильник, даже при заблокированном экране. Виджеты на рабочем столе и спокойная ночная тема.</p></div><div class="ph"><img src="img/ru-night.png" alt="Экран приложения Ритм: Будильники, которые звонят" width="1170" height="2532" loading="lazy"></div></section>
+<section class="f"><div class="tx"><h2>Ритм Семья</h2><p>Общие дела («купить молоко → Маше»), день семьи и окно «Все свободны», расписание детей, общие списки покупок. Каждый сам решает, что из своего дня показывать. 14 дней бесплатно.</p></div><div class="ph"><img src="img/ru-famday.png" alt="Экран приложения Ритм: Ритм Семья" width="1170" height="2532" loading="lazy"></div></section>
+<section class="vid"><h2>Посмотреть за минуту</h2><button class="yt" data-id="juPsQoWNGvQ" aria-label="Посмотреть за минуту"><img src="https://i.ytimg.com/vi/juPsQoWNGvQ/hq720.jpg" alt="" loading="lazy"><span>▶</span></button>
+<p><a href="https://www.youtube.com/@pulseworkapps" rel="noopener">Уроки и ролики — на канале Pulsework</a></p></section>
+<section class="faq"><h2>Вопросы</h2><details><summary>Ритм бесплатный?</summary><p>Да. Всё, кроме «Семьи», бесплатно и без рекламы. «Семья» — платная подписка на всю семью, первые 14 дней бесплатно.</p></details><details><summary>Где хранятся мои данные?</summary><p>На телефоне. Копия в облаке — только если вы сами войдёте через Google. Подробно — в политике конфиденциальности.</p></details><details><summary>Есть ли Ритм для iPhone?</summary><p>Пока только Android (Android 7 и новее).</p></details><details><summary>На каких языках?</summary><p>Русский, английский, испанский, португальский, немецкий, французский, итальянский, нидерландский, польский, турецкий, японский, корейский и китайский.</p></details></section>
+<section class="cta"><div class="stores"><a class="st main" href="https://play.google.com/store/apps/details?id=com.dmitriy.ritm" rel="noopener">Google Play</a><a class="st" href="https://www.rustore.ru/catalog/app/com.dmitriy.ritm" rel="noopener">RuStore</a><a class="st" href="https://ritm-day-navigator.ru.uptodown.com/android" rel="noopener">Uptodown (APK)</a></div></section>
+<footer><p><a href="privacy.html">Политика конфиденциальности</a> · <a href="terms.html">Пользовательское соглашение</a> · Поддержка: <a href="mailto:ritm.app.help@gmail.com">ritm.app.help@gmail.com</a></p><p>Разработчик — Pulsework · <a href="https://www.youtube.com/@pulseworkapps" rel="noopener">YouTube</a></p></footer>
+</div>
+<script>document.querySelectorAll('.yt').forEach(b=>b.addEventListener('click',()=>{b.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="video"></iframe>'},{once:true}))</script>
+</body></html>
