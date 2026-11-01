@@ -30,6 +30,7 @@ ol{text-align:left;color:var(--muted);padding-left:20px;margin:14px 0 0;font-siz
   <h1 id="h">Вас зовут делать вместе</h1>
   <div class="g" id="g"></div>
   <p id="s">Отмечайтесь каждый день — серия растёт, пока не пропустил никто.</p>
+  <p id="gift">🎁 Месяц «Ритм Семья» в подарок — вам и другу</p>
   <a class="b p" id="play" href="https://play.google.com/store/apps/details?id=com.dmitriy.ritm">Установить «Ритм» — бесплатно</a>
   <a class="b s" id="open" href="#">Уже есть — открыть</a>
   <small id="auto">После установки из Google Play приглашение примется само</small>
@@ -49,7 +50,7 @@ ol{text-align:left;color:var(--muted);padding-left:20px;margin:14px 0 0;font-siz
   document.getElementById('h').textContent=en?(n?n+' invites you to do it together':'You’re invited to do it together'):(n?n+' зовёт вас делать вместе':'Вас зовут делать вместе');
   if(en){
     document.documentElement.lang='en';document.title='Ritm — do it together';
-    var T={s:'Check in every day — the streak grows as long as nobody misses.',play:'Install Ritm — free',open:'Already have it — open',auto:'After installing from Google Play the invitation is accepted automatically',
+    var T={s:'Check in every day — the streak grows as long as nobody misses.',gift:'🎁 A free month of Ritm Family — for you and your friend',play:'Install Ritm — free',open:'Already have it — open',auto:'After installing from Google Play the invitation is accepted automatically',
       how:'<li>Other stores: install Ritm.</li><li>“Me” → “Partners” → “Enter code”.</li><li>Enter the code above.</li>'};
     for(var id in T){var e=document.getElementById(id);if(id==='how')e.innerHTML=T[id];else e.textContent=T[id]}
   }
