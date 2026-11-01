@@ -49,6 +49,7 @@
 <li>Members of a shared goal (up to 5 people) see your name from your Google account, the goal itself (for example, “Workout 15 min”), how often to do it, and your check-ins for it: on which day and at what time you checked in, froze a day or nudged a partner. The rest of your day, tasks, notes and journals are not visible to them.</li>
 <li>The goal and check-ins are stored in Google Cloud Firestore for as long as the goal exists. Notifications (“already did it — your turn”, “is nudging you”) are sent by the same server as for families; it checks that the sender and the recipient are members of the same goal.</li>
 <li>An invitation link contains the goal code, the inviter’s name and the goal title — the person you send it to sees them. If Ritm is installed from Google Play via the link, the code is passed to the app through Google Play (install referrer) so the invitation opens automatically.</li>
+<li>Invitation reward: when an invited person first checks in on the same day as the goal’s creator, our server extends Ritm Family for both by 30 days and records who invited whom (account IDs and date) so that the reward for one person is given only once.</li>
 <li>You can leave a goal on its screen. The creator can delete the goal — then check-ins are erased for everyone.</li>
 <li>The day card (“Day closed”) is drawn on your phone; it is shared only when you share it yourself, and it shows no task names — only numbers.</li>
 </ul>
