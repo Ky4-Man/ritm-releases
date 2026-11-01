@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ритм — делать вместе</title>
+<meta name="robots" content="noindex">
+<!-- Страница ссылки-приглашения «Напарник» (pair.js, pairJoinUrl): pair.html?c=КОД&n=Имя&t=Цель. Публикуется в github.com/Ky4-Man/ritm-releases (GitHub Pages).
+     Открывает приложение по ritm://pair?c=КОД; если «Ритма» нет — Google Play с referrer=pair=КОД (после установки приглашение примется само) и код для RuStore. -->
+<style>
+:root{--bg:#F3F6F5;--card:#fff;--ink:#13201E;--muted:#5D6D6A;--accent:#0E7C76;--line:#DCE5E3}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1A1C;--card:#16262A;--ink:#EAF1F0;--muted:#94A6A7;--accent:#3BB3A9;--line:#24383C}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:16px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px 22px;max-width:420px;width:100%;text-align:center}
+.av{display:flex;justify-content:center;margin-bottom:6px}.av span{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:22px;color:#fff;background:#0E7C76;box-shadow:0 0 0 3px var(--card)}.av span+span{background:#D98418;margin-left:-12px}
+h1{font-size:23px;margin:8px 0 6px;letter-spacing:-.01em}
+.g{font-size:26px;font-weight:800;margin:10px 0 2px}
+p{color:var(--muted);margin:6px 0}
+.code{font-size:28px;font-weight:800;letter-spacing:.14em;margin:16px 0 2px;font-variant-numeric:tabular-nums}
+a.b{display:block;text-decoration:none;border-radius:14px;padding:14px;font-weight:700;margin-top:10px}
+a.p{background:var(--accent);color:#fff}a.s{border:1px solid var(--line);color:var(--ink)}
+small{display:block;color:var(--muted);margin-top:12px}
+ol{text-align:left;color:var(--muted);padding-left:20px;margin:14px 0 0;font-size:14px}
+</style>
+</head>
+<body>
+<div class="c">
+  <div class="av"><span id="a1">Р</span><span>?</span></div>
+  <h1 id="h">Вас зовут делать вместе</h1>
+  <div class="g" id="g"></div>
+  <p id="s">Отмечайтесь каждый день — серия растёт, пока не пропустил никто.</p>
+  <a class="b p" id="play" href="https://play.google.com/store/apps/details?id=com.dmitriy.ritm">Установить «Ритм» — бесплатно</a>
+  <a class="b s" id="open" href="#">Уже есть — открыть</a>
+  <small id="auto">После установки из Google Play приглашение примется само</small>
+  <div class="code" id="code"></div>
+  <ol id="how"><li>RuStore: <a href="https://www.rustore.ru/catalog/app/com.dmitriy.ritm">установите «Ритм»</a>.</li><li>«Я» → «Напарники» → «Ввести код».</li><li>Введите код выше.</li></ol>
+</div>
+<script>
+(function(){
+  var q=location.search,get=function(k){var m=new RegExp('[?&]'+k+'=([^&]*)').exec(q);try{return m?decodeURIComponent(m[1].replace(/\+/g,' ')):''}catch(e){return''}};
+  var c=get('c').replace(/-/g,'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6),n=get('n').slice(0,30),t=get('t').slice(0,60);
+  var en=!/^ru\b/i.test(navigator.language||'');
+  document.getElementById('code').textContent=c?c.slice(0,3)+'-'+c.slice(3):'';
+  if(n)document.getElementById('a1').textContent=n[0].toUpperCase();
+  document.getElementById('g').textContent=t;
+  var url='ritm://pair?c='+c;document.getElementById('open').href=url;
+  if(c)document.getElementById('play').href='https://play.google.com/store/apps/details?id=com.dmitriy.ritm&referrer='+encodeURIComponent('pair='+c);
+  document.getElementById('h').textContent=en?(n?n+' invites you to do it together':'You’re invited to do it together'):(n?n+' зовёт вас делать вместе':'Вас зовут делать вместе');
+  if(en){
+    document.documentElement.lang='en';document.title='Ritm — do it together';
+    var T={s:'Check in every day — the streak grows as long as nobody misses.',play:'Install Ritm — free',open:'Already have it — open',auto:'After installing from Google Play the invitation is accepted automatically',
+      how:'<li>Other stores: install Ritm.</li><li>“Me” → “Partners” → “Enter code”.</li><li>Enter the code above.</li>'};
+    for(var id in T){var e=document.getElementById(id);if(id==='how')e.innerHTML=T[id];else e.textContent=T[id]}
+  }
+  if(!c){document.getElementById('how').style.display='none'}
+  if(c&&/Android/i.test(navigator.userAgent))setTimeout(function(){location.href=url},300);
+})();
+</script>
+</body>
+</html>
