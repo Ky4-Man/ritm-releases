@@ -13,7 +13,7 @@
 <body>
 <main>
 <h1>Privacy policy of the Ritm app</h1>
-<p><b>Version of 1 November 2026.</b> The Russian version is the original; this is a translation.</p>
+<p><b>Version of 5 November 2026.</b> The Russian version is the original; this is a translation.</p>
 
 <h2>In short</h2>
 <p>Your tasks, schedule, notes and settings are stored on your phone. If you choose to sign in with Google (“Account and sync”), a copy is kept in Google Firebase cloud under your account, so you can move to a new phone or use two devices. Without signing in, your data goes nowhere. With your permission the app sends anonymous statistics: which features are used. It helps us understand what to improve and what to remove.</p>
@@ -40,8 +40,15 @@
 <li>From your personal plan the family sees, for the next 14 days, only activity times and — as you choose — their type, the word “busy”, or the name. Notes, journals, summaries and free time are never shared. You can hide a whole day.</li>
 <li>The schedule of a person “without a phone” (for example, a child) is kept by the adult who added them: only the name and activity times that adult enters go to the family.</li>
 <li>For notifications (“you got a task”, “you’re invited”) the cloud stores your phone’s Firebase Cloud Messaging address (Google LLC). Notifications are sent by our server on Cloudflare Workers (Cloudflare, Inc.); it checks that sender and recipient are in the same family; it doesn’t keep the notifications, and technical server logs are deleted after a few days.</li>
-<li>Subscription: the cloud stores the subscription end date and how it was obtained (trial, code, transfer). If you pay by bank transfer, the developer receives a request with your name, email, amount and the receipt screenshot you attach. It is used only to confirm the payment and for income records; we never receive bank card data.</li>
+<li>Subscription: the cloud stores the subscription end date and how it was obtained (trial, code, transfer). If you pay by bank transfer, the developer receives a request with your name, email, amount and the receipt screenshot you attach. It is used only to confirm the payment and for income records; we never receive bank card data. To check the payment, the request with the screenshot is sent to the developer’s private Telegram chat and stays in that chat.</li>
 <li>Leave a family in “Me” → “Ritm Family”. Your personal plan stays with you; tasks and events you added stay with the family. The creator can delete the family — then shared tasks, events and lists are erased for everyone.</li>
+</ul>
+
+<h2>Shared places and “When I’m with…” — only in Ritm Family</h2>
+<ul>
+<li>A family’s shared places (name, map point, radius) are stored in the family’s cloud and all its members see them. If you assign a task at one of your personal places, its name and point go to that person with the task.</li>
+<li>If you agreed to reminders when you are together, your phone collects location data, Wi-Fi network data and data about nearby phones (Bluetooth), even when the app is closed or not in use. When it enters a shared place or connects to a network, it sends family phones, through our server, only fingerprints of the place and the router. Over Bluetooth it broadcasts a code that changes every hour and that only your family’s phones can recognize.</li>
+<li>Coordinates and network names are not sent. Fingerprints are computed with the family’s secret key; the server neither stores nor compares them, and the app shows nobody where anyone is. You can withdraw consent in Family → Members → Nearby.</li>
 </ul>
 
 <h2>Partner — only if you created a shared goal or accepted an invitation</h2>
@@ -91,7 +98,7 @@ If you connected your own key, the request goes directly to the service you chos
 </ul>
 
 <h2>Why</h2>
-<p>Statistics — to understand which features are used and which aren’t, and to make the app simpler. Cloud — so your data isn’t lost when you change phones. Data is not sold, not used for advertising and not shared with anyone except Google as a processor (statistics, sign-in and cloud).</p>
+<p>Statistics — to understand which features are used and which aren’t, and to make the app simpler. Cloud — so your data isn’t lost when you change phones. Data is not sold, not used for advertising and not shared with anyone except Google as a processor (statistics, sign-in and cloud) and Telegram, which delivers bank-transfer payment requests to the developer.</p>
 
 <h2>How to turn it off</h2>
 <p>“Me” → “About” → “Send statistics”. After turning it off nothing is sent. Uninstalling the app deletes all its data from the phone, except backups in “Downloads”.</p>
